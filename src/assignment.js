@@ -34,17 +34,17 @@ const assignment = {};
  * @param {Array} arrayOfNumbers the array containing even or non-even numbers
  * @returns number the count of even numbers
  */
- let checkEven = [1,2,4,5,6,7,8,9,10];
+
  function countEvenNumbers(arrayOfNumbers) {
-     // return arrayOfNumbers.length;
-     checkEven.filter((number)=>{
+  
+     arrayOfNumbers.filter((number)=>{
          number % 2 == 0
          console.log(`Even numbers are: ${number}`)
      })
    return arrayOfNumbers.length;
      
  }
- countEvenNumbers(checkEven);
+ countEvenNumbers([1,2,4,6,7,8]);
 
 /**
  * Challenge - 3
@@ -66,7 +66,7 @@ const assignment = {};
          let fahrenheit = Math.trunc((cel)*(9/5) + 32);
          console.log(`${index}. ${cel} degree celcius in fahrenheit is ${fahrenheit} degree`);
      })
-      return arrayOfNumbers;
+     // return arrayOfNumbers;
  }
  celsiusToFahrenheit(celciusTemp);
 
