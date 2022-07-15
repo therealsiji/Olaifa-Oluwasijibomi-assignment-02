@@ -13,10 +13,16 @@ const assignment = {};
  * @param {Array} arrayOfNumbers the array of numbers to sum
  * @returns number the sum of the numbers
  */
-function sumOfNumbers(arrayOfNumbers) {
-    return arrayOfNumbers.length;
-}
-// assignment.sumOfNumbers = sumOfNumbers;
+ let numbers = [1,2,3,4,5,6];
+ let sum = 0;
+ function sumOfNumbers(arrayOfNumbers) {
+     for(let i = 0 ; i < arrayOfNumbers.length; i++){
+         sum += arrayOfNumbers[i];
+         console.log(sum);
+     }
+       
+ }
+ sumOfNumbers(numbers);
 
 /**
  * Challenge - 2
@@ -27,10 +33,16 @@ function sumOfNumbers(arrayOfNumbers) {
  * @param {Array} arrayOfNumbers the array containing even or non-even numbers
  * @returns number the count of even numbers
  */
-function countEvenNumbers(arrayOfNumbers) {
-    return arrayOfNumbers.length;
-}
-// assignment.countEvenNumbers = countEvenNumbers;
+ let checkEven = [1,2,4,5,6,7,8,9,10]
+ function countEvenNumbers(checkEven) {
+     // return arrayOfNumbers.length;
+     checkEven.filter((number)=>{
+         number % 2 == 0
+         console.log(`Even numbers are: ${number}`)
+     })
+     
+ }
+ countEvenNumbers(checkEven);
 
 /**
  * Challenge - 3
@@ -46,10 +58,15 @@ function countEvenNumbers(arrayOfNumbers) {
  * @param {Array} arrayOfNumbers the array containing temperatures in Celsius to be converted
  * @returns Array the converted temperatures in Fahrenheit
  */
-function celsiusToFahrenheit(arrayOfNumbers) {
-    return arrayOfNumbers;
-}
-// assignment.celsiusToFahrenheit = celsiusToFahrenheit;
+ let celciusTemp = [22,13,44,225,67];
+ function celsiusToFahrenheit(arrayOfNumbers) {
+     celciusTemp.forEach((cel,index)=>{
+         let fahrenheit = Math.trunc((cel)*(9/5) + 32);
+         console.log(`${index}. ${cel} degree celcius in fahrenheit is ${fahrenheit} degree`);
+     })
+     // return arrayOfNumbers;
+ }
+ celsiusToFahrenheit(celciusTemp);
 
 
 // ========================
@@ -57,3 +74,5 @@ function celsiusToFahrenheit(arrayOfNumbers) {
 module.exports = assignment;
 // ========================
 
+
+ 
